@@ -4,20 +4,21 @@ import { ArrowRight, Menu, X } from "lucide-react";
 export default function TaxidiNavbar({ onOpenExpo }) {
   const [menuOpen, setMenuOpen] = useState(false);
 const navItems = [
-  { name: "Home", link: "#home" },
-  { name: "Services", link: "#services" },
-  { name: "Destinations", link: "#destinations" },
-  { name: "About", link: "#about" },
-  { name: "Contact", link: "#contact" }
+  "Services",
+  "Destinations",
+  "About",
+  "Contact"
 ];
 
   return (
     <header className="sticky top-0 z-40 border-b border-slate-200 bg-[#f5f5f5]/95 backdrop-blur">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-10">
-        <div className="font-serif text-[22px] font-bold tracking-[-0.04em] text-black sm:text-[28px]">
-          Fredmind <span className="text-[#4f8fe5]">Taxidi</span>
-        </div>
-
+    <a
+  href="#top"
+  className="cursor-pointer font-serif text-[22px] font-bold tracking-[-0.04em] text-black sm:text-[28px]"
+>
+  Fredmind <span className="text-[#4f8fe5]">Taxidi</span>
+</a>
     <nav className="hidden items-center gap-8 md:flex">
   {navItems.map((item) => (
     <a
