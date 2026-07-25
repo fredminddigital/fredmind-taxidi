@@ -97,7 +97,7 @@ export default function TaxidiHome({ onOpenExpo }) {
         </div>
       </section>
 
-      <section className="bg-[#f5f5f5] px-4 py-8 sm:px-6 lg:px-10 lg:py-14">
+      <section  id="about" className="bg-[#f5f5f5] px-4 py-8 sm:px-6 lg:px-10 lg:py-14">
         <div className="mx-auto max-w-7xl">
           <SectionHeading eyebrow="Why Choose Us" title="African Expertise, Global Standards" subtitle="What makes Fredmind Taxidi your trusted partner for global opportunities" serif />
           <motion.div initial="hidden" whileInView="visible" variants={stagger} viewport={{ once: true, amount: 0.15 }} className="mx-auto mt-16 grid max-w-5xl gap-8 md:grid-cols-2">
@@ -121,7 +121,10 @@ export default function TaxidiHome({ onOpenExpo }) {
         </div>
       </section>
 
-      <section className="border-y border-slate-700 bg-black px-4 py-20 text-white sm:px-6 lg:px-10">
+    <section
+  id="destinations"
+  className="border-y border-slate-700 bg-black px-4 py-20 text-white sm:px-6 lg:px-10"
+>
         <div className="mx-auto max-w-7xl">
           <SectionHeading eyebrow="Global Reach" title="Your Gateway to Every Corner of the World" subtitle="We process applications and provide services for destinations across all continents" light serif />
           <motion.div initial="hidden" whileInView="visible" variants={stagger} viewport={{ once: true, amount: 0.15 }} className="mx-auto mt-16 grid max-w-5xl grid-cols-2 gap-4 sm:grid-cols-3 xl:grid-cols-4">
@@ -158,7 +161,7 @@ export default function TaxidiHome({ onOpenExpo }) {
         </div>
       </section>
 
-      <section className="relative overflow-hidden bg-[#4f8fe5] px-4 py-20 text-center text-white sm:px-6 lg:px-10">
+      <section  id="contact" className="relative overflow-hidden bg-[#4f8fe5] px-4 py-20 text-center text-white sm:px-6 lg:px-10">
         <div className="absolute inset-0 opacity-20">
           <div className="absolute left-[25%] top-0 h-full w-[180px] -skew-x-[20deg] bg-white/30" />
           <div className="absolute right-[20%] top-0 h-full w-[180px] -skew-x-[20deg] bg-white/20" />
