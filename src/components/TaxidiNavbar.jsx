@@ -4,10 +4,10 @@ import { ArrowRight, Menu, X } from "lucide-react";
 export default function TaxidiNavbar({ onOpenExpo }) {
   const [menuOpen, setMenuOpen] = useState(false);
 const navItems = [
-  "Services",
-  "Destinations",
-  "About",
-  "Contact"
+  { name: "Services", link: "#services" },
+  { name: "Destinations", link: "#destinations" },
+  { name: "About", link: "#about" },
+  { name: "Contact", link: "#contact" }
 ];
 
   return (
