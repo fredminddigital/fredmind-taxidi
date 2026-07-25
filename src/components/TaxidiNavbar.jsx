@@ -3,7 +3,13 @@ import { ArrowRight, Menu, X } from "lucide-react";
 
 export default function TaxidiNavbar({ onOpenExpo }) {
   const [menuOpen, setMenuOpen] = useState(false);
-  const navItems = ["Home", "Services", "Destinations", "About", "Contact"];
+const navItems = [
+  { name: "Home", link: "#home" },
+  { name: "Services", link: "#services" },
+  { name: "Destinations", link: "#destinations" },
+  { name: "About", link: "#about" },
+  { name: "Contact", link: "#contact" }
+];
 
   return (
     <header className="sticky top-0 z-40 border-b border-slate-200 bg-[#f5f5f5]/95 backdrop-blur">
@@ -12,16 +18,17 @@ export default function TaxidiNavbar({ onOpenExpo }) {
           Fredmind <span className="text-[#4f8fe5]">Taxidi</span>
         </div>
 
-        <nav className="hidden items-center gap-8 md:flex">
-          {navItems.map((item) => (
-            <button
-              key={item}
-              className="cursor-pointer text-sm font-medium text-slate-700 transition hover:text-[#4f8fe5] lg:text-[15px]"
-            >
-              {item}
-            </button>
-          ))}
-        </nav>
+    <nav className="hidden items-center gap-8 md:flex">
+  {navItems.map((item) => (
+    <a
+      key={item.name}
+      href={item.link}
+      className="cursor-pointer text-sm font-medium text-slate-700 transition hover:text-[#4f8fe5] lg:text-[15px]"
+    >
+      {item.name}
+    </a>
+  ))}
+</nav>
 
         <button
           onClick={onOpenExpo}
