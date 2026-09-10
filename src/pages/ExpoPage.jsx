@@ -279,9 +279,9 @@ export default function ExpoPage() {
                   <select name="city_edition" value={formValues.city_edition} onChange={handleChange} className="w-full cursor-pointer appearance-none rounded-2xl border border-[#f4a300]/50 bg-[#111b38] px-5 py-4 text-base text-white outline-none transition focus:border-[#f4a300] focus:ring-2 focus:ring-[#f4a300]/20" required>
                     <option value="" className="bg-[#081431] text-white">Select a city</option>
                     <option className="bg-[#081431] text-white">Abuja • October 3, 2026</option>
-                    <option className="bg-[#081431] text-white">Lagos • Comimg soon</option>
-                    <option className="bg-[#081431] text-white">Port Harcourt • Comimg soon</option>
-                    <option className="bg-[#081431] text-white">Accra, Ghana • Comimg soon</option>
+                    <option className="bg-[#081431] text-white">Lagos • Coming soon</option>
+                    <option className="bg-[#081431] text-white">Port Harcourt • Coming soon</option>
+                    <option className="bg-[#081431] text-white">Accra, Ghana • Coming soon</option>
                   </select>
                 </label>
                 <label className="block">
