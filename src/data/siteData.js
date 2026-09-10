@@ -130,10 +130,10 @@ export const taxidiDestinations = [
 ];
 
 export const expoCities = [
-  { city: "Abuja", date: "Apr 10", edition: "Edition 1", venue: "Intl. Conference Centre" },
-  { city: "Lagos", date: "Jun 5", edition: "Edition 2", venue: "Eko Hotels or Similar" },
-  { city: "Port Harcourt", date: "Jul 17", edition: "Edition 3", venue: "Hotel Presidential or Similar" },
-  { city: "Accra, Ghana", date: "Aug 21", edition: "Edition 4", venue: "Kempinski or Similar" }
+  { city: "Abuja", date: "Oct 3", edition: "Edition 1", venue: "Hall 2, Ground floor, Plot 205, Dalaba Street, Novare Central Floor,Wuse Zone 5" },
+  { city: "Lagos", date: "", edition: "Edition 2", venue: "Coming Soon" },
+  { city: "Port Harcourt", date: "", edition: "Edition 3", venue: "Coming Soon" },
+  { city: "Accra, Ghana", date: "", edition: "Edition 4", venue: "Coming Soon" }
 ];
 
 export const expoExpectations = [
