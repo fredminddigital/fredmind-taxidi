@@ -3,7 +3,17 @@ import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import FloatingGlow from "../components/ui/FloatingGlow";
 import SectionHeading from "../components/ui/SectionHeading";
+<<<<<<< HEAD
 import { expoCities, expoExpectations, fadeUp, stagger } from "../data/siteData";
+=======
+import {
+  expoCities,
+  expoExpectations,
+  fadeUp,
+  stagger,
+  FORM_ENDPOINT,
+} from "../data/siteData";
+>>>>>>> 3737eb3d74878b0aa232bceecdba508288867552
 
 export default function ExpoPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -24,11 +34,16 @@ export default function ExpoPage() {
     setFormValues((prev) => ({ ...prev, [name]: value }));
   }
 
+<<<<<<< HEAD
   function handleSubmit(event) {
+=======
+  async function handleSubmit(event) {
+>>>>>>> 3737eb3d74878b0aa232bceecdba508288867552
     event.preventDefault();
     setIsSubmitting(true);
     setSubmitState({ type: "", message: "" });
 
+<<<<<<< HEAD
     window.setTimeout(() => {
       setIsSubmitting(false);
       setSubmitState({
@@ -46,16 +61,69 @@ export default function ExpoPage() {
         referral_source: "",
       });
     }, 1200);
+=======
+    try {
+      const formData = new FormData();
+      formData.append("first_name", formValues.first_name);
+      formData.append("last_name", formValues.last_name);
+      formData.append("email", formValues.email);
+      formData.append("phone", formValues.phone);
+      formData.append("profile", formValues.profile);
+      formData.append("preferred_destination", formValues.preferred_destination);
+      formData.append("city_edition", formValues.city_edition);
+      formData.append("referral_source", formValues.referral_source);
+      formData.append("_subject", "New Study Abroad Expo Registration");
+      formData.append("_captcha", "false");
+      formData.append("_template", "table");
+
+      const response = await fetch(FORM_ENDPOINT, {
+        method: "POST",
+        headers: { Accept: "application/json" },
+        body: formData,
+      });
+
+      if (!response.ok) {
+        throw new Error("Submission failed");
+      }
+
+      window.setTimeout(() => {
+        setIsSubmitting(false);
+        setSubmitState({
+          type: "success",
+          message: "Registration received successfully. Our team will contact you shortly.",
+        });
+        setFormValues({
+          first_name: "",
+          last_name: "",
+          email: "",
+          phone: "",
+          profile: "",
+          preferred_destination: "",
+          city_edition: "",
+          referral_source: "",
+        });
+      }, 1200);
+    } catch (error) {
+      setIsSubmitting(false);
+      setSubmitState({
+        type: "error",
+        message: "Something went wrong while submitting. Please try again.",
+      });
+    }
+>>>>>>> 3737eb3d74878b0aa232bceecdba508288867552
   }
 
   return (
     <div className="min-h-screen bg-[#020918] text-white">
       <section className="relative overflow-hidden bg-[radial-gradient(circle_at_top,#192b64_0%,#081431_40%,#020918_100%)] px-4 pb-0 pt-14 text-white sm:px-6 lg:px-10 lg:pt-20">
+<<<<<<< HEAD
         <motion.div
           animate={{ rotate: 360 }}
           transition={{ duration: 80, repeat: Infinity, ease: "linear" }}
           className="pointer-events-none absolute left-1/2 top-[4%] h-[900px] w-[900px] -translate-x-1/2 rounded-full border border-white/6"
         />
+=======
+>>>>>>> 3737eb3d74878b0aa232bceecdba508288867552
         <div className="pointer-events-none absolute inset-0 overflow-hidden">
           <div className="absolute left-1/2 top-[2%] h-[920px] w-[920px] -translate-x-1/2 rounded-full border border-white/8" />
           <div className="absolute left-1/2 top-[14%] h-[640px] w-[640px] -translate-x-1/2 rounded-full border border-white/10" />
@@ -246,10 +314,17 @@ export default function ExpoPage() {
                   <span className="mb-3 block text-xs font-semibold uppercase tracking-[0.22em] text-white/70">City Edition to Attend</span>
                   <select name="city_edition" value={formValues.city_edition} onChange={handleChange} className="w-full cursor-pointer appearance-none rounded-2xl border border-[#f4a300]/50 bg-[#111b38] px-5 py-4 text-base text-white outline-none transition focus:border-[#f4a300] focus:ring-2 focus:ring-[#f4a300]/20" required>
                     <option value="" className="bg-[#081431] text-white">Select a city</option>
+<<<<<<< HEAD
                     <option className="bg-[#081431] text-white">Abuja • April 10, 2026</option>
                     <option className="bg-[#081431] text-white">Lagos • June 5, 2026</option>
                     <option className="bg-[#081431] text-white">Port Harcourt • July 17, 2026</option>
                     <option className="bg-[#081431] text-white">Accra, Ghana • August 21, 2026</option>
+=======
+                    <option className="bg-[#081431] text-white">Abuja • October 3, 2026</option>
+                    <option className="bg-[#081431] text-white">Lagos • Coming soon</option>
+                    <option className="bg-[#081431] text-white">Port Harcourt • Coming soon</option>
+                    <option className="bg-[#081431] text-white">Accra, Ghana • Coming soon</option>
+>>>>>>> 3737eb3d74878b0aa232bceecdba508288867552
                   </select>
                 </label>
                 <label className="block">

@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "name": "fredmind-taxidi-expo-components",
+=======
+  "name": "fredmind-taxidi-expo-components-complete",
+>>>>>>> 3737eb3d74878b0aa232bceecdba508288867552
   "private": true,
   "version": "0.0.1",
   "type": "module",
